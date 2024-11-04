@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #3b3b3b); /* Dark gradient background */
+    color: white;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ff4e50; /* Red color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn.red {
+    background-color: #ff4e50; /* Red button */
+    color: white;
+}
+
+.btn.black {
+    background-color: #222; /* Black button */
+    color: white;
+}
+
+.btn.red:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.btn.black:hover {
+    background-color: #111; /* Darker black on hover */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    background: url('https://example.com/your-background-image.jpg') no-repeat center center; /* Replace with a real image */
+    background-size: cover;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.thought-of-the-day {
+    padding: 20px;
+    text-align: center;
+}
+
+.domains {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.domain-card {
+    background-color: #444; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.domain-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    transition: all 0.3s ease; /* Transition for input focus */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff0000; /* Highlight on focus */
+}
+
+.btn {
+    padding: 10px;
+    background-color: #ff0000; /* Red button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease; /* Transition for button hover */
+}
+
+.btn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.domain-card h2 {
+    font-size: 1.8em;
+}
+
+.footer-content {
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+
+.alert {
+    padding: 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+.main-content {
+    display: flex; /* Use flexbox to arrange content side by side */
+    justify-content: space-between; /* Space between left and right content */
+    margin: 20px 0;
+}
+
+.content-left {
+    flex: 0 0 70%; /* Left content takes 70% of space */
+}
+
+.content-right {
+    flex: 0 0 28%; /* Right content takes 28% of space */
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notifications {
+    margin-top: 0;
+}
+
+.notification-content {
+    margin-top: 10px;
+}
+
+.notification-item {
+    background-color: #ffffff; /* White background for items */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.notification-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.notification-banner {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333; /* Black palette */
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start hidden */
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+/* Fade-in and fade-out animation */
+.notification-banner.show {
+    opacity: 1;
+    animation: fade-out 5s ease forwards;
+}
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#thought{
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Login Section Styles */
+.login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2 {
+    text-align: center;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-section button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-section, .meetings-section {
+    margin-top: 20px;
+}
+
+.task-item, .meeting-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-item:last-child, .meeting-item:last-child {
+    border-bottom: none;
+}
